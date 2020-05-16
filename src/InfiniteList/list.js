@@ -6,7 +6,8 @@ class List extends React.Component {
     style = {
         border: "1px solid green",
         margin: 6,
-        padding: 8
+        padding: 8,
+        cursor: "pointer"
     };
 
     state = {
@@ -101,11 +102,11 @@ class List extends React.Component {
                                         })
                                     }
                                 }}
-                                style={this.style}
+                                style= {this.style}
                                 key={index}
                             >
                                 <img src={item.img} alt='Random'></img>
-                                <div className='card-title'>{item.type}</div>
+                                <h3 className='card-title'>{item.type}</h3>
                                 {this.state.detailedInfoIndex === index ? <p>{item.text_out}</p> : null}
                             </div>
                         </div>
